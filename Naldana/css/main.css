@@ -42,7 +42,7 @@ body {
 }
 /* espaciado entre iconos*/
 .fa-github{ 
-    margin-right: 1.4rem;
+    margin-right: 0.5em;
 }
 
 p{
@@ -61,7 +61,7 @@ p{
     position: relative;
     top: 30%;
     right: 95%;
-    font-size: 1.5rem;
+    font-size: 1.5em;
 
     display: flex;
     flex-wrap: wrap;
@@ -69,7 +69,7 @@ p{
 
 }
 .options i:last-child {
-    font-size: 1.6rem;
+    font-size: 1.6em;
 }
 
 
@@ -88,7 +88,7 @@ p{
 .big-hero p {
     font-size: 0.99em;;
     color: #D7DEE6;
-    padding: 0.6rem;;
+    padding: 0.6em;;
 
 }
 
@@ -247,7 +247,7 @@ p{
     background-color: #F74442;
     font-weight: 400;
     color: white;
-    font-size: 1rem;
+    font-size: 1 em;
     margin-bottom: 3.5em; 
 }
 
@@ -301,7 +301,22 @@ footer p{
 
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
-  
+
+    /* Big area */
+
+    .big-hero img {
+        width: 200px;
+    }
+
+    .logo {
+        width: 175px;
+        margin: 2em 1em 1em 3em;
+    }
+
+    .fas{
+        font-size: 2em;
+    }
+  /* Articles */
     .post ul {
         list-style: none;
         display: flex;
@@ -310,17 +325,28 @@ footer p{
     }
     
     .post ul li {
-        min-height: 350px;
+        min-height: 350px; 
         max-height: 3500px;
-        margin: 1rem 2rem;
+        margin: auto;
         flex: 1 0 300px;
     }
 
-
-    .logo {
-        width: 150px;
-        margin: 1em 1em 1em 2.5em;
+    .post article h3 {
+        text-align: left;
     }
+
+    /* About*/
+
+
+    .contact-form {
+        margin: 0em 4em;
+    }
+
+
+    /*TODO: FALTA CSS */
+} 
+
+@media only screen and (min-width: 1024px) {
 
     .show-desktop {
         display: block;
@@ -335,19 +361,10 @@ footer p{
         position: static;
         z-index: 20;
         width: auto;
-        height:auto;
+        height: auto;
         display: flex;
         margin-top: 1em;
     }
-
-
-
-
-    /*TODO: FALTA CSS */
-} 
-
-@media only screen and (min-width: 1024px) {
-
        /*TODO: FALTA CSS */
 
 
@@ -355,8 +372,16 @@ footer p{
 }
 
 @media only screen and (min-width: 1440px) {
-
     /*TODO: FALTA CSS */
+
+    html, body{
+        height: 100%;
+    }
+
+     .big-hero{
+        height: 86%;
+        width: 100%;
+    }
     .container {
         width: 80%;
         margin: 0 auto;
