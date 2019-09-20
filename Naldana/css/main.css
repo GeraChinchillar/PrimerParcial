@@ -81,6 +81,7 @@ p{
 .big-hero h2 {
     font-size: 2.1em;
     font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.002em;
     margin-top: 1em ;
 }
@@ -147,7 +148,7 @@ p{
     background-color: #ffffff;
     text-align: left;
     margin: 2em;
-}
+} 
 
 .post article img{
     height: 170px;
@@ -313,8 +314,9 @@ footer p{
         margin: 2em 1em 1em 3em;
     }
 
+
     .fas{
-        font-size: 2em;
+        font-size: 1.5em;
     }
   /* Articles */
     .post ul {
@@ -325,10 +327,14 @@ footer p{
     }
     
     .post ul li {
-        min-height: 350px; 
-        max-height: 3500px;
+        min-height: 400px; 
+        max-width: 375px;
         margin: auto;
         flex: 1 0 300px;
+    }
+
+    .post ul li article{
+        margin: 1.5em;
     }
 
     .post article h3 {
@@ -336,8 +342,6 @@ footer p{
     }
 
     /* About*/
-
-
     .contact-form {
         margin: 0em 4em;
     }
@@ -363,8 +367,101 @@ footer p{
         width: auto;
         height: auto;
         display: flex;
-        margin-top: 1em;
+        margin-top: 2em;
     }
+
+    .header{
+        margin-bottom: 3em;
+    }
+
+    .logo{
+        width: 220px;
+        margin-top: 2;
+        margin-left: 5em;
+    }
+
+    .header li a {
+        font-size: 1em;
+    }
+
+    /*tamaño de iconos*/
+    .fab{
+        font-size: calc(2em + 1vh);
+    }
+
+    .social-links{
+        margin-bottom: 0.5em;
+    }
+
+    .fa-arrow-circle-down{
+        font-size: 5em;
+        color: #0AC693;
+        margin-bottom: 1em;
+    }
+    /* Big area */
+
+    .big-hero img {
+        width: 200px;
+    }
+
+    .big-hero h2{
+        font-size: 2.5em;
+    }
+
+    .big-hero p{
+        font-size: 1em;
+    }
+
+  /* Articles */
+    .post ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .post ul li {
+        min-height: 400px; 
+        max-width: 375px;
+        margin: auto;
+        flex: 1 0 300px;
+    }
+
+    .post ul li article{
+        margin: 1.5em;
+    }
+
+    .post article h3 {
+        text-align: left;
+    }
+
+    /* About*/
+
+    .about .container{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    .about h2{
+        width: 100%;
+    }
+
+    .about .bio-info{
+        width: 46%;
+    }
+    .about .contact{
+        width: 46%;
+    }
+
+    .bio-info p{
+        margin: 1em ;
+        padding: 0em;
+    }
+
+    .contact-form{
+        margin: 1em;
+    }
+    
        /*TODO: FALTA CSS */
 
 
