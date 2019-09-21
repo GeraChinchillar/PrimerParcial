@@ -161,8 +161,8 @@ p{
     margin: 0.5em;
     padding: 0em 0.5em;
     font-size: 1.1em;
+    white-space: nowrap;
     overflow: hidden;
-    text-align: justify;
     text-overflow: ellipsis;
 }
 
@@ -327,24 +327,52 @@ footer p{
     }
     
     .post ul li {
-        min-height: 400px; 
-        max-width: 375px;
+        min-height: 350px; 
+        max-height: 3500px;
+        min-width: 350px;
         margin: auto;
         flex: 1 0 300px;
     }
 
     .post ul li article{
-        margin: 1.5em;
+       margin: 1.5em;
     }
 
-    .post article h3 {
-        text-align: left;
+    .post article h3{
+        font-size: 1.2em;
+        font-weight: bolder;
+    }
+
+    .post article p{
+        font-size: 0.8em;
     }
 
     /* About*/
-    .contact-form {
-        margin: 0em 4em;
+    
+    .about .container{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
     }
+    .about h2{
+        width: 100%;
+    }
+
+    .about .bio-info{
+        width: 46%;
+    }
+    .bio-info p{
+        font-size: 1em;
+        margin: 1.5em 0.5em;
+        padding: 0;
+    }
+    .about .contact{
+        width: 46%;
+    }
+    .about .contact-form{
+        margin: 0;
+    }
+ 
 
 
     /*TODO: FALTA CSS */
@@ -436,22 +464,6 @@ footer p{
     }
 
     /* About*/
-
-    .about .container{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-    }
-    .about h2{
-        width: 100%;
-    }
-
-    .about .bio-info{
-        width: 46%;
-    }
-    .about .contact{
-        width: 46%;
-    }
 
     .bio-info p{
         margin: 1em ;
