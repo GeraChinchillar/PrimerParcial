@@ -1,7 +1,16 @@
+/*
+
+   ***** CHRISTIAN GERARDO CHINCHILLA RAMIREZ 00049518 ******
+    Adaptaciones echas desde una pantalla con resolucion 1024px y el responsive toogle device toobar de google.
+
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 /* El CSS siguiente esta pensando primero para moviles y luego para 
    Escritiorio*/
+
+/* Aplicando un formato general al html*/
 *, ::before, ::after {
     margin: 0;
     padding: 0;
@@ -10,7 +19,7 @@
 }
 
 /* El estilo base para moviles */
-/*Le da color el color de fondo, color de letra y tipo de letra por defecto a todo el contenido de la pagina*/
+/*Dando color de fondo, color de letra, tipo de letra y alineción por defecto a todo el contenido dentro del body*/
 body {
     background-color: #112935;
     color: white;
@@ -19,28 +28,34 @@ body {
     font-weight: 400;
 }
 
+/*Aplicando propiedad plex a Header para tener control de los elemnetos*/
 .header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1em;
 }
 
+/* No muestra titulo de caracter semantico*/
 .src-only {
     display: none;
 }
 
+/* No mostrando Menu lateral en la pagina principal*/
 .hide-mobile {
     display: none;
 }
 
+/***** Big hero *****/
+
+/*Aplicando tamaño y posicion a elementos en big-hero*/
 .fa-bars{
     margin-right: 0.5em;
 }
-/*tamaño de iconos*/
+
 .fab{
     font-size: calc(1.5em + 1vh);
 }
-/* espaciado entre iconos*/
+
 .fa-github{ 
     margin-right: 0.5em;
 }
@@ -55,25 +70,6 @@ p{
     margin: 1em 1em 1em 2.5em;
 }
 
-.options {
-    color: inherit;
-    text-decoration: none;
-    position: relative;
-    top: 30%;
-    right: 95%;
-    font-size: 1.5em;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-
-}
-.options i:last-child {
-    font-size: 1.6em;
-}
-
-
-/* Big area */
 .big-hero img {
     width: 135px;
 }
@@ -90,7 +86,20 @@ p{
     font-size: 0.99em;;
     color: #D7DEE6;
     padding: 0.6em;;
+}
 
+/*Dando formato a Menu desplegable*/
+.options {
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    top: 30%;
+    right: 95%;
+    font-size: 1.5em;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 /* Social links*/
@@ -109,18 +118,19 @@ p{
     text-decoration: none;
     font-size: 2.5em;
 }
-.big-hero  li a{
-    margin-bottom: 3em;
-}
+
 .fas{
     font-size: 1.125em;
 }
 
+/****** green Area ******/
 
+/*Dando color y formato */
 .green-area {
     background-color: #0AC693; 
 }
 
+    /*Aplicando propiedad flex, h2 se mantiene en el lugar ubicado*/
 .post-h2 {
     display: flex;
     justify-content:space-between;
@@ -140,6 +150,7 @@ p{
     padding-bottom:1em;
 }
 
+/*Aplicando Flex a Articulos y formato para tener control de ellos*/
 .post ul li {
     display: flex;
     justify-content: center;
@@ -180,8 +191,9 @@ p{
     line-height: 25px;
 }
 
-/* About */
+/***** About *****/
 
+/*Version Movil sin propiedad Flex, aplicando formato*/
 .about{
     margin-top: 2em;
 }
@@ -206,6 +218,7 @@ p{
     line-height: 25px;
 }
 
+/*Dando formato a Contact, informacion de contacto*/
 .contact {
     display: flex;
     flex-direction: column;
@@ -217,6 +230,7 @@ p{
     margin-top: 1.3em;
 }
 
+/*Aplicando propiedad Flex preparando para pantallas de mayor resolucion*/
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -239,7 +253,7 @@ p{
 
 }
 
-/* Decorando placeholder */
+/* Decorando placeholder, dando formato para adaptacion en diferentes navegadores*/
 
 ::-webkit-input-placeholder { 
     color: #D7DEE6; 
@@ -251,6 +265,8 @@ p{
  
 :-ms-input-placeholder { color: #D7DEE6; }
 
+
+/* Boton para mandar informacion brindada en about*/
 .contact-form input[type=submit] {
     background-color: #F74442;
     font-weight: 400;
@@ -259,6 +275,9 @@ p{
     margin-bottom: 3.5em; 
 }
 
+/***** footer *****/
+
+/*Dando color, tamaño y formato a footer*/
 .black-decoration{
     background-image: url("../images/decoracion_oscura_small.svg");
 }
@@ -275,7 +294,7 @@ footer .social-links {
 footer p{
     padding-bottom: 2em;
 }
-
+/**/
 .menu {
     background-color: #112935;
     position: absolute;
@@ -284,9 +303,7 @@ footer p{
     right: 0;
     width: 100vw;
     height: calc(100vh - 60px);
-}
 
-.menu {
     list-style: none;
     text-align: left;
     padding: 1em;
@@ -307,11 +324,12 @@ footer p{
     color: red;
 }
 
-/* Pesonalizando estilo para tablets*/
+/* Pesonalizando estilo para tablets resolucion mas de 768px*/
 @media only screen and (min-width: 768px) {
 
-    /* Big area */
+    /**** Big area ****/
 
+    /*Adaptando todo lo echo anteriormente a una mayor escala*/
     .big-hero img {
         width: 200px;
     }
@@ -325,14 +343,16 @@ footer p{
     .fas{
         font-size: 1.5em;
     }
-  /* Articles */
+  /* green aerea / Articles */
+
+  /*Aplicando flex a contenedor exterior*/
     .post ul {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+    /*Aplicando formato para adaptar a pantalla*/
     .post ul li {
         min-height: 350px; 
         max-height: 3500px;
@@ -354,36 +374,41 @@ footer p{
         font-size: 0.8em;
     }
 
-    /* About*/
-    
+    /*** About***/
+    /*Aplicando Propiedad Flex*/
     .about .container{
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
     }
+
+    /*Utilizando Flex para aliniar contenedores uno a la par del otro*/
     .about h2{
         margin-top: 0;
         width: 100%;
     }
-
     .about .bio-info{
         width: 46%;
     }
+    .about .contact{
+        width: 46%;
+    }
+
     .bio-info p{
         font-size: 1em;
         margin: 1.5em 0.5em;
         padding: 0;
     }
-    .about .contact{
-        width: 46%;
-    }
+
     .about .contact-form{
         margin: 0;
     }
 } 
 
+/*Diseño adaptado para pantallas con 1024px o mas */
 @media only screen and (min-width: 1024px) {
 
+    /*Mostrando Menu superior derecho, no mostrado en versiones moviles*/
     .show-desktop {
         display: block;
     }
@@ -393,15 +418,13 @@ footer p{
     }
 
     .menu {
-        background-color: #112935; 
         position: static;
-        z-index: 20;
         width: auto;
         height: auto;
         display: flex;
         margin-top: 1em;
     }
-
+    /*Aplicando Formato para adaptar a pantalla*/
     .header{
         margin-bottom: 3em;
     }
@@ -430,7 +453,8 @@ footer p{
         color: #0AC693;
         margin-bottom: 1em;
     }
-    /* Big area */
+
+    /*** Big area ****/
 
     .big-hero img {
         width: 200px;
@@ -478,7 +502,7 @@ footer p{
         font-size: 0.8em;
     }
 
-    /* About*/
+    /*** About ***/
 
     .bio-info img{
         width: 200px;
@@ -493,15 +517,19 @@ footer p{
     .contact-form{
         margin: 1em;
     }
+    /*Reduciendo Boton de contactar a un tamaño mas estetico*/
     .contact-form input[type=submit]{
         width: 50%;
     }
 
 }
 
+/*Adaptacion para pantallas con resolucion mayor a 1440px*/
 @media only screen and (min-width: 1440px) {
 
-    /*Big Area*/
+    /***Big Area***/
+
+    /*Ajustando Big Hero a la pantalla completa*/
     html, body{
         height: 100%;
     }
@@ -515,7 +543,7 @@ footer p{
         margin: 0 auto;
         max-width: 1440px;
     }
-   
+   /*Aplicando formato estetico para adaptacion de la pantalla*/
     .header li a{
         font-size: 1.2em;
     }
@@ -535,7 +563,7 @@ footer p{
         margin-top: 0.3em;
     }
 
-    /* Green Area / Ariticles*/
+    /* Green Area / Ariticulos*/
     .post h2{
         margin: 0.7em;
     }
@@ -553,7 +581,7 @@ footer p{
         max-width: 100%;
     }
 
-    /*about*/
+    /***about***/
 
     .about img{
         width: 215px;
