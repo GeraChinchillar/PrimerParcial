@@ -121,11 +121,14 @@ p{
     background-color: #0AC693; 
 }
 
-.post {
-    padding: 1em;
-    margin-bottom: -2px;
+.post-h2 {
+    display: flex;
+    justify-content:space-between;
+    align-items: center; 
+    
 }
 .post h2 {
+    padding: 1em;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.25em;
@@ -134,12 +137,16 @@ p{
 
 .post ul {
     list-style: none;
+    padding-bottom:1em;
 }
 
 .post ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
     min-height: 300px;
     max-width: 350px;
-    margin: 2rem auto;
+    margin: 2em auto;
 }
 
 .post ul li article {
@@ -147,7 +154,7 @@ p{
     border-radius: 10px;
     background-color: #ffffff;
     text-align: left;
-    margin: 2em;
+    max-width: 300px;
 } 
 
 .post article img{
@@ -219,9 +226,9 @@ p{
 .contact-form input, .contact-form textarea{
     padding: 1rem 2rem;
     border: none;
-    border-radius: 0px 2em;
+    border-radius: 0 1.3em;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.1em;
+    font-size: 1em;
     width: 100%;
 }
 
@@ -355,6 +362,7 @@ footer p{
         justify-content: center;
     }
     .about h2{
+        margin-top: 0;
         width: 100%;
     }
 
@@ -372,10 +380,6 @@ footer p{
     .about .contact-form{
         margin: 0;
     }
- 
-
-
-    /*TODO: FALTA CSS */
 } 
 
 @media only screen and (min-width: 1024px) {
@@ -395,7 +399,7 @@ footer p{
         width: auto;
         height: auto;
         display: flex;
-        margin-top: 2em;
+        margin-top: 1em;
     }
 
     .header{
@@ -403,13 +407,13 @@ footer p{
     }
 
     .logo{
-        width: 220px;
+        width: 175px;
         margin-top: 2;
         margin-left: 5em;
     }
 
     .header li a {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     /*tamaño de iconos*/
@@ -440,7 +444,10 @@ footer p{
         font-size: 1em;
     }
 
-  /* Articles */
+  /* Green area / article */
+    .green-area .post{
+        padding: 1.5em;
+    }
     .post ul {
         list-style: none;
         display: flex;
@@ -449,51 +456,127 @@ footer p{
     }
     
     .post ul li {
-        min-height: 400px; 
-        max-width: 375px;
-        margin: auto;
-        flex: 1 0 300px;
+        
+        max-height: 600px;
+        min-width: 300px;
+        margin: 0px auto;
+    }
+    .post article{
+        width: 80%;
+        height: 90%;
     }
 
-    .post ul li article{
-        margin: 1.5em;
+    .post h2{
+        padding: 0;
+        margin: 0;
     }
-
     .post article h3 {
+        font-size: 1em;
         text-align: left;
+    }
+    .post article p{
+        font-size: 0.8em;
     }
 
     /* About*/
 
+    .bio-info img{
+        width: 200px;
+    }
+
     .bio-info p{
-        margin: 1em ;
         padding: 0em;
+        margin-left: 3em;
+        margin-right: 2em;
     }
 
     .contact-form{
         margin: 1em;
     }
-    
-       /*TODO: FALTA CSS */
-
-
+    .contact-form input[type=submit]{
+        width: 50%;
+    }
 
 }
 
 @media only screen and (min-width: 1440px) {
-    /*TODO: FALTA CSS */
 
+    /*Big Area*/
     html, body{
         height: 100%;
     }
 
      .big-hero{
-        height: 86%;
+        height: 85%;
         width: 100%;
     }
     .container {
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
         max-width: 1440px;
+    }
+   
+    .header li a{
+        font-size: 1.2em;
+    }
+
+    .header img{
+        width: 160px;
+        margin-left:  8em;
+        margin-top: 1em;
+    }
+
+    .menu{
+        margin-top: 0.2em;
+        margin-right: 2em;
+    }
+
+    .fa-arrow-circle-down{
+        margin-top: 0.3em;
+    }
+
+    /* Green Area / Ariticles*/
+    .post h2{
+        margin: 0.7em;
+    }
+
+    .post ul li {
+        
+        min-height: 350px;
+        max-height: 600px;
+        min-width: 450px;
+        margin: 0px auto;
+    }
+    .post ul li article{
+        width: 70%;
+        height: 90%;
+        max-width: 100%;
+    }
+
+    /*about*/
+
+    .about img{
+        width: 215px;
+        margin-bottom: 3em;
+    }
+    .bio-info p{
+        margin-left: 5em;
+        margin-right: 2em;
+    }
+    .about .contact{
+        margin-left:5em;
+    }
+
+    .about .contact-form{
+        width: 70%;
+    }
+
+    .contact-form input, .contact-form textarea{
+        padding: 0.5em 1.5em; 
+    }
+  
+
+    .contact-form input[type=submit]{
+        width: 50%;
     }
 }
